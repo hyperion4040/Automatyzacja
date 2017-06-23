@@ -5,4 +5,15 @@ SSHCase
     Open Connection    46.101.195.218
     ${output}    login    studentwsb    lubieStudia@#
     ${written}=    Write    su
-    Should Contain    ${written}    su        
+    Should Contain    ${written}    su      
+    ${output}=	Read		
+    Should Not Contain	${output}	${written}	# Was consumed from the output
+    
+Commnads
+    Start Command	echo 'HELLO'
+    ${stdout}=	Read Command Output	
+    Should Contain	${stdout}	'HELLO'
+    Start Command	echo 'SECOND'	
+    ${stdout}=	Read Command Output	
+    Should Contain	${stdout}	'SECOND'
+    
