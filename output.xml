@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20170623 21:59:00.274" generator="Robot 3.0.2 (Python 2.7.12 on linux2)">
+<robot generated="20170623 22:23:34.177" generator="Robot 3.0.2 (Python 2.7.12 on linux2)">
 <suite source="/home/student/Desktop/RobotTests" id="s1" name="RobotTests">
 <suite source="/home/student/Desktop/RobotTests/Exercise.txt" id="s1-s1" name="Exercise">
 <test id="s1-s1-t1" name="SSHCase">
@@ -8,7 +8,7 @@
 <arguments>
 <arg>46.101.195.218</arg>
 </arguments>
-<status status="PASS" endtime="20170623 21:59:00.429" starttime="20170623 21:59:00.428"></status>
+<status status="PASS" endtime="20170623 22:23:34.312" starttime="20170623 22:23:34.311"></status>
 </kw>
 <kw name="Login" library="SSHLibrary">
 <doc>Logs into the SSH server with the given `username` and `password`.</doc>
@@ -19,8 +19,8 @@
 <assign>
 <var>${output}</var>
 </assign>
-<msg timestamp="20170623 21:59:00.435" level="INFO">Logging into '46.101.195.218:22' as 'studentwsb'.</msg>
-<msg timestamp="20170623 21:59:02.363" level="INFO">Read output: Welcome to Ubuntu 16.04.2 LTS (GNU/Linux 4.4.0-79-generic x86_64)
+<msg timestamp="20170623 22:23:34.313" level="INFO">Logging into '46.101.195.218:22' as 'studentwsb'.</msg>
+<msg timestamp="20170623 22:23:36.360" level="INFO">Read output: Welcome to Ubuntu 16.04.2 LTS (GNU/Linux 4.4.0-79-generic x86_64)
 
  * Documentation:  https://help.ubuntu.com
  * Management:     https://landscape.canonical.com
@@ -34,43 +34,52 @@
 
 
 *** System restart required ***
-Last login: Fri Jun 23 19:58:35 2017 from 83.25.237.163
+Last login: Fri Jun 23 19:59:01 2017 from 83.25.237.163
 studentwsb@ubuntu-512mb-fra1-01-wsb1:~$</msg>
-<msg timestamp="20170623 21:59:02.364" level="INFO">${output} = Welcome to Ubuntu 16.04.2 LTS (GNU/Linux 4.4.0-79-generic x86_64)
+<msg timestamp="20170623 22:23:36.360" level="INFO">${output} = Welcome to Ubuntu 16.04.2 LTS (GNU/Linux 4.4.0-79-generic x86_64)
 
  * Documentation:  https://help.ubuntu.com
  * Management:     https://landscape.canonical.com
  * Support:        https://ubuntu.c...</msg>
-<status status="PASS" endtime="20170623 21:59:02.364" starttime="20170623 21:59:00.430"></status>
+<status status="PASS" endtime="20170623 22:23:36.360" starttime="20170623 22:23:34.313"></status>
 </kw>
-<kw name="List Directory" library="SSHLibrary">
-<doc>Returns and logs items in the remote `path`, optionally filtered with `pattern`.</doc>
+<kw name="Write" library="SSHLibrary">
+<doc>Writes the given `text` on the remote machine and appends a newline.</doc>
 <arguments>
-<arg>tmp/</arg>
+<arg>su</arg>
 </arguments>
 <assign>
-<var>@{items}</var>
+<var>${written}</var>
 </assign>
-<msg timestamp="20170623 21:59:02.523" level="INFO">[chan 1] Opened sftp connection (server version 3)</msg>
-<msg timestamp="20170623 21:59:02.634" level="FAIL">There was no directory matching 'tmp/'.</msg>
-<status status="FAIL" endtime="20170623 21:59:02.635" starttime="20170623 21:59:02.365"></status>
+<msg timestamp="20170623 22:23:36.408" level="INFO">su</msg>
+<msg timestamp="20170623 22:23:36.411" level="INFO">${written} = su
+</msg>
+<status status="PASS" endtime="20170623 22:23:36.413" starttime="20170623 22:23:36.361"></status>
 </kw>
-<status status="FAIL" endtime="20170623 21:59:02.635" critical="yes" starttime="20170623 21:59:00.426">There was no directory matching 'tmp/'.</status>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${written}</arg>
+<arg>su</arg>
+</arguments>
+<status status="PASS" endtime="20170623 22:23:36.414" starttime="20170623 22:23:36.414"></status>
+</kw>
+<status status="PASS" endtime="20170623 22:23:36.415" critical="yes" starttime="20170623 22:23:34.309"></status>
 </test>
-<status status="FAIL" endtime="20170623 21:59:02.638" starttime="20170623 21:59:00.372"></status>
+<status status="PASS" endtime="20170623 22:23:36.420" starttime="20170623 22:23:34.259"></status>
 </suite>
-<status status="FAIL" endtime="20170623 21:59:02.642" starttime="20170623 21:59:00.338"></status>
+<status status="PASS" endtime="20170623 22:23:36.424" starttime="20170623 22:23:34.234"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="1" pass="0">Critical Tests</stat>
-<stat fail="1" pass="0">All Tests</stat>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="1" id="s1" name="RobotTests" pass="0">RobotTests</stat>
-<stat fail="1" id="s1-s1" name="Exercise" pass="0">RobotTests.Exercise</stat>
+<stat fail="0" id="s1" name="RobotTests" pass="1">RobotTests</stat>
+<stat fail="0" id="s1-s1" name="Exercise" pass="1">RobotTests.Exercise</stat>
 </suite>
 </statistics>
 <errors>
