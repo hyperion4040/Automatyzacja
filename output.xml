@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170623 21:59:00.274" generator="Robot 3.0.2 (Python 2.7.12 on linux2)">
+<suite source="/home/student/Desktop/RobotTests" id="s1" name="RobotTests">
+<suite source="/home/student/Desktop/RobotTests/Exercise.txt" id="s1-s1" name="Exercise">
+<test id="s1-s1-t1" name="SSHCase">
+<kw name="Open Connection" library="SSHLibrary">
+<doc>Opens a new SSH connection to the given `host` and `port`.</doc>
+<arguments>
+<arg>46.101.195.218</arg>
+</arguments>
+<status status="PASS" endtime="20170623 21:59:00.429" starttime="20170623 21:59:00.428"></status>
+</kw>
+<kw name="Login" library="SSHLibrary">
+<doc>Logs into the SSH server with the given `username` and `password`.</doc>
+<arguments>
+<arg>studentwsb</arg>
+<arg>lubieStudia@#</arg>
+</arguments>
+<assign>
+<var>${output}</var>
+</assign>
+<msg timestamp="20170623 21:59:00.435" level="INFO">Logging into '46.101.195.218:22' as 'studentwsb'.</msg>
+<msg timestamp="20170623 21:59:02.363" level="INFO">Read output: Welcome to Ubuntu 16.04.2 LTS (GNU/Linux 4.4.0-79-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+62 packages can be updated.
+0 updates are security updates.
+
+
+*** System restart required ***
+Last login: Fri Jun 23 19:58:35 2017 from 83.25.237.163
+studentwsb@ubuntu-512mb-fra1-01-wsb1:~$</msg>
+<msg timestamp="20170623 21:59:02.364" level="INFO">${output} = Welcome to Ubuntu 16.04.2 LTS (GNU/Linux 4.4.0-79-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.c...</msg>
+<status status="PASS" endtime="20170623 21:59:02.364" starttime="20170623 21:59:00.430"></status>
+</kw>
+<kw name="List Directory" library="SSHLibrary">
+<doc>Returns and logs items in the remote `path`, optionally filtered with `pattern`.</doc>
+<arguments>
+<arg>tmp/</arg>
+</arguments>
+<assign>
+<var>@{items}</var>
+</assign>
+<msg timestamp="20170623 21:59:02.523" level="INFO">[chan 1] Opened sftp connection (server version 3)</msg>
+<msg timestamp="20170623 21:59:02.634" level="FAIL">There was no directory matching 'tmp/'.</msg>
+<status status="FAIL" endtime="20170623 21:59:02.635" starttime="20170623 21:59:02.365"></status>
+</kw>
+<status status="FAIL" endtime="20170623 21:59:02.635" critical="yes" starttime="20170623 21:59:00.426">There was no directory matching 'tmp/'.</status>
+</test>
+<status status="FAIL" endtime="20170623 21:59:02.638" starttime="20170623 21:59:00.372"></status>
+</suite>
+<status status="FAIL" endtime="20170623 21:59:02.642" starttime="20170623 21:59:00.338"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="RobotTests" pass="0">RobotTests</stat>
+<stat fail="1" id="s1-s1" name="Exercise" pass="0">RobotTests.Exercise</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

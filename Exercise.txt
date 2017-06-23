@@ -1,0 +1,11 @@
+*** Settings ***
+Library    SSHLibrary    
+*** Test Cases ***
+SSHCase
+    Open Connection    46.101.195.218
+    ${output}    login    studentwsb    lubieStudia@#
+    @{items}=	List Directory	tmp/
+
+    
+         
+    
