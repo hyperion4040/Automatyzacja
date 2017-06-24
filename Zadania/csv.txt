@@ -1,0 +1,11 @@
+JMeterVariables:
+MyVar_First_Variable=here comes value 1
+MyVar_Second_Variable=and here value 2
+JMeterThread.last_sample_ok=true
+JMeterThread.pack=org.apache.jmeter.threads.SamplePackage@10cc9b4
+START.HMS=153028
+START.MS=1264671028968
+START.YMD=20100128
+TESTSTART.MS=1264671163750
+server.host=httpbin.org
+sever.port=8080

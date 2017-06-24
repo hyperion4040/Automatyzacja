@@ -1,0 +1,5 @@
+JMeterVariables:
+
+server.host=46.101.160.95
+server.port=8001
+
