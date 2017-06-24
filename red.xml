@@ -4,6 +4,7 @@
     <relativeTo>WORKSPACE</relativeTo>
     <referencedLibrary type="PYTHON" name="Selenium2Library" path="/usr/local/lib/python2.7/dist-packages"/>
     <referencedLibrary type="PYTHON" name="SSHLibrary" path="/usr/local/lib/python2.7/dist-packages/SSHLibrary"/>
+    <referencedLibrary type="PYTHON" name="RobotTests" path=""/>
     <pythonpath/>
     <classpath/>
     <excludedForValidation/>
