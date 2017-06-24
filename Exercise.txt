@@ -12,7 +12,7 @@ SSHCase
     ${output}    login    studentwsb    lubieStudia@#
     Should Contain    ${output}    to Ubuntu
     Should Contain     ${output}    Welcome
-    # Should Contain    ${output}    Welcome 16.04    #Tutaj powinien być test fail 
+    Should Contain    ${output}    Welcome 16.04    #Tutaj powinien być test fail 
     Should Contain    ${output}    ${message}       
     ${file_list}    List Directory    .
     : FOR    ${file}    IN    @{file_list}

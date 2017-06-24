@@ -5,6 +5,7 @@
     <referencedLibrary type="PYTHON" name="Selenium2Library" path="/usr/local/lib/python2.7/dist-packages"/>
     <referencedLibrary type="PYTHON" name="SSHLibrary" path="/usr/local/lib/python2.7/dist-packages/SSHLibrary"/>
     <referencedLibrary type="PYTHON" name="RobotTests" path=""/>
+    <referencedLibrary type="PYTHON" name="RequestsLibrary" path="/usr/local/lib/python2.7/dist-packages/RequestsLibrary"/>
     <pythonpath/>
     <classpath/>
     <excludedForValidation/>
